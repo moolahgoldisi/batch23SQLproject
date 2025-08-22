@@ -4,7 +4,7 @@ Feature: API
   Background:
     Given a B-token is generated
 
-  @api1
+  @api
   Scenario: create employee
     Given a request is prepared for creating an employee using API call
     When a POST call is made to create an employee

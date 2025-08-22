@@ -80,6 +80,7 @@ public class APIStepsClass {
     @Then("the employee id {string} is stored as global variable")
     public void the_employee_id_is_stored_as_global_variable(String string) {
         employee_id =  response.jsonPath().getString("Employee.employee_id");
+        System.out.println(employee_id);
     }
 
     //----------------------------------------------------------------------------------------------------------
@@ -95,7 +96,7 @@ public class APIStepsClass {
 
     @When("a GET call is made")
     public void a_get_call_is_made() {
-        Response response = request.when().get(APIConstants.GET_ONE_EMPLOYEE);
+         response = request.when().get(APIConstants.GET_ONE_EMPLOYEE);
     }
 
     @Then("the status code for get call is {int}")
@@ -111,6 +112,8 @@ public class APIStepsClass {
         List<Map<String, String>> expectedData = dataTable.asMaps();
 
         Map<String, String> actualData = response.jsonPath().get(empObject);
+
+        System.out.println(actualData);
 
 
         for (Map<String, String> map: expectedData){
