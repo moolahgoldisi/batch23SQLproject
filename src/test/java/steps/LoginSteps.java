@@ -35,10 +35,10 @@ public class LoginSteps extends CommonMethods {
     @When("user enters username and password")
     public void user_enters_username_and_password() {
         //  WebElement usernameField = driver.findElement(By.id("txtUsername"));
-        loginPage.usernameField.sendKeys("Admin");
+        loginPage.usernameField.sendKeys("admin");
 
         //  WebElement passwordField = driver.findElement(By.id("txtPassword"));
-        loginPage.passwordField.sendKeys("Hrms123");
+        loginPage.passwordField.sendKeys("Hum@nhrm123");
 
     }
 
